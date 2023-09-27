@@ -28,12 +28,16 @@ function calculatesFarePrice(pickUpLocation, dropOffLocation){
     let farePrice;
     let distance = distanceTravelledInFeet(pickUpLocation, dropOffLocation);
     if(distance <= 400){
-        return farePrice = 0;
+        farePrice = 0;
     } else if(distance > 400 && distance <=2000){
-        return farePrice = (distance - 400)*(2/100);
+        farePrice = (distance - 400)*(2/100);
     } else if(distance > 2000 && distance <=2500){
-        return farePrice = 25;
+        farePrice = 25;
     } else if(distance > 2500){
-        return `cannot travel that far`;
+        farePrice =  `cannot travel that far`;
     }
+    return farePrice;
 }
+
+
+
